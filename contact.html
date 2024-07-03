@@ -4,88 +4,217 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./img/shirt-icon.png" type="image/x-icon">
-  <link rel="stylesheet" 
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/geek.css">
 
-  <title> Contacto - Remeras GEEK </title>
+<title> Contacto </title>
 
- <style>
- </style>
+<style> </style>
+<script>
 
+function validateAle() 
+{ 
+  let upplname = document.getElementById('family-name').value; 
+  let uppfname = document.getElementById('given-name').value;  
+  let lowfmail = document.getElementById("userEmail").value;  
+  document.getElementById('family-name').value = upplname.toUpperCase(); 
+  document.getElementById('given-name').value  = uppfname.toUpperCase();
+  document.getElementById("userEmail").value  = lowfmail.toLowerCase();
+  return true;
+}
+
+
+function isHttpValid(str) {
+ try {
+   const newUrl = new URL(str);
+   return newUrl.protocol === 'http:' || newUrl.protocol === 'https:';
+ } 
+   catch (err) {
+   return false;
+ }
+}
+</script>
 </head>
 
+
 <body>
-
-<header id="miheader">
-
-<!-- Navbar -->
-<div class="w3-top">
-
- <div class="w3-bar w3-theme-d2 w3-left-align">
-
-  <a href="./index.html" class="w3-bar-item w3-button w3-teal mytheme">
-     <i class="fa fa-home" style="font-size:16px; margin-right: 2px;"  ></i></a>
-
-  <a href="./gallery.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Galeria</a>
-  <a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Empresa</a>
-  <a href="./contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
-  <a href="./contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Registro</a>
-
-    <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i>
-</button>     
-
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-    </div>
-  </div>
-
- </div>
-
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#" class="w3-bar-item w3-button">Team</a>
-    <a href="#" class="w3-bar-item w3-button">Work</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <a href="#" class="w3-bar-item w3-button">Search</a>
-  </div>
-</div>
-
-</header>
-
-<br>
-<br>
-    <h1>Remeras premium </h1>
-
+  <header id="header">
+  </header>
 
 <main>
+  <br>
+    <h2>Contacto </h2>
 
-      <h5 id="my"> GEEK</h5>
+<div class="form-main">
+  <form id="registr" class="contc" action="show_data.html" target="_blank"
+      onsubmit="return validateAle()">
+
+  <fieldset> 
+    <legend class="G20">&nbsp;Datos Personales&nbsp;</legend> 
+
+  <div class="container">
+
+    <div class="panel-left"> <!-- left panel -->
+
+     <div> 
+        <label>Apellido: <b class="red p9"> *</b> </label>
+        <input 
+         type="text"
+         id="family-name" 
+         name="Apellido" 
+         size="40"  
+         minlength="3"
+         maxlength="40"  
+         placeholder="Apellido solamente"
+         pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" 
+         title="Solo letras"
+         required  
+         autofocus> 		
+     </div>
+
+     <div> 
+        <label>Nombres: <b class="red p9"> *</b> </label>
+        <input 
+           type="text"  
+	   style="text-transform: uppercase;"
+ 	   id="given-name" 
+           name="Nombres" 
+           size="40"   
+           minlength="3"
+           maxlength="40"  
+           placeholder="Nombres"  
+           pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" 
+           title="Solo letras"
+           required>		
+     </div>
+
+     <div> 
+    	<label>Fecha Nacimiento: </label>
+        <input 
+         type="date" 
+         id="dob" 
+         name="Fech.Nac">		
+     </div> 
+
+     <div> 
+        <label>e-mail: <b class="red p9"> *</b> </label> <br>
+        <input 
+          type="email" 
+	        style="text-transform: lowercase; font-size 13px;"
+          id="userEmail" 
+          name="email" 
+          size="40" 
+          placeholder="user_mail@dominio.com" 
+          pattern="^([a-zA-Z0-9._%]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,})$"
+          title ="Ingresa un email válido"     
+          required>		
+     </div>
+ 
+     <div>  
+        <label>URL: </label> 
+        <input 
+          type="text" 
+          id="myurl" 
+          name="URL" 
+          size="40"
+          placeholder="http://misitio.com">
+     </div>  
+  
+     <div> 
+        <label>Telefono: <b class="red p9"> *</b></label><br>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="Celular" 
+          placeholder="Ej. +54-9-11-9999-9999" 
+          required>
+     </div> 
+
+     <div class="p9">
+       <span> &emsp;
+       <input class="checkbox" 
+          type="checkbox" 
+          id="scales" 
+          name="terms" 
+          cheked
+          required>
+        <label class="p9">&nbsp;
+           <a href="./terms.html">He leído y acepto los términos y condiciones</a></label></span>
+       <span class="red p9"> &emsp; &emsp; * campos obligatorios </span>    
+     </div>
+
+    </div>  <!-- end left panel --> 
+
+
+    <div class="panel-right">  <!-- right panel --> 
+
+      <div class="container">
+        <img id="foto" src="./img/interrogation.svg" class="photo-bg" width="125" height="167" 
+          alt="user image">
+      </div>
+
+      <div class="gender">
+        <br> 
+        <p style="padding-bottom: 8px;"><label> Género: </label></p>              
+           <input type="radio"  id="Femenino"  name="genero" value="f">
+           <label for="Femenino" >&nbsp;Femenino </label> <br>             
+           <input type="radio"  id="Masculino" name="genero" value="m">   
+           <label for="Masculino">&nbsp;Masculino </label> <br>
+           <input type="radio"  id="Otro"      name="genero" value="o">       
+           <label for="Otro"     >&nbsp;Otro      </label> <br> <br>
+      </div>
+    </div>  <!-- end right panel --> 
+
+  </div>
+  <!-- end container /entry fields -->
+   
+  <input type="submit" class="centro" id="send" value="Enviar Formulario">
+   
+  <div class="alert alert-success mt-2 d-none"
+      id="alertSuccess">
+  </div>
+
+  </fieldset>
+ </form>
+</div>
 
 </main>
 
-
  <footer class="mytheme">
-
-   <div class="mytheme myfooter">
-
-     <div class="social">
-       <a href="./index.html"> <i class="fa fa-home"></i></a>
-       <a href="https://facebook.com/geek/">  <i class="fa fa-facebook"></i></a>
-       <a href="https://whatsapp.com/geek/"> <i class="fa fa-whatsapp"></i></a>
-       <a href="https://telegram.com/geek/"> <i class="fa fa-telegram"></i></a>
-       <a href="https://linkedin.com/geek/"> <i class="fa fa-linkedin"></i></a>
-     </div>
-    <p style="text-align: right; background-color: #ff711a;">&copy; 2024 Grupo-20 &emsp; </p>
-  </div>
-   
+   <div class="myfooter">
+   </div>  
  </footer>
+
+<script src="./js/geek.js"> </script>
+<script>
+var oImg = document.getElementById("foto");
+
+document.addEventListener('input',(e)=>{
+var cFile = "";
+
+   if(e.target.getAttribute('name')=="genero") {
+      var rad = e.target.value;
+       switch (rad) {
+          case 'f':
+               cFile = "./img/avatar-mujer.png"
+               break;  
+          case 'm':
+               cFile = "./img/avatar-hombre.png"
+               break;  
+          case 'o':
+               cFile = "./img/avatar-otro.png"
+               break;  
+          default:
+       }  
+   }
+    // console.log(e.target.value);
+    oImg.src = cFile;
+    oImg.alt = "";    
+});
+
+</script>
 
 </body>
 </html>

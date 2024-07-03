@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./img/shirt-icon.png" type="image/x-icon">
+
+  <link rel="stylesheet" 
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/geek.css">
+  <link rel="stylesheet" href="./css/banner.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title> Carousel </title>
+
+</head>
+
+<body>
+
+<header id="header">
+</header>
+
+<main>
+<br> 
+<br>
+    <h1>Remeras premium </h1> 
+
+      <h5 id="my"> GEEK</h5>
+
+<div class="contenedor">
+</div>
+
+
+<div id="demo" style="">
+ &nbsp;
+</div>
+
+</main>
+
+
+  <div id="app">
+
+      <div v-if="error===true">Se produjo un error-intente mas tarde
+      </div>
+      <div v-else class="api-contenedor">
+         
+      <div v-for="shirt in datos" class="api-tarjeta">
+                   
+          <img :src="shirt.imagen" :alt="shirt.nombre"> 
+
+          <div class="api-cuerpo">
+            <h4 id="tjname"> {{shirt.nombre}}</h4>
+
+            <h5 id="tjstat" class='red' v-if="shirt.stock < 1"> 
+                   {{shirt.estado}} </h5>
+            <h5 v-else id="tjstat"> {{shirt.estado}} </h5>   
+          
+            <h5 id="tjid" style="text-align:left;">&nbsp; #{{ shirt.id+1500}}</h5>               
+          </div>
+     
+     </div> 
+
+  </div>
+
+  <br> <br>    
+<!-- ........................................................................................... -->
+
+
+    <section id="top-rated">
+                 
+                <p style="font-size: 24px; text-align: center;"><br>Las más populares</p>
+                <br>
+                <div class="container">
+                                        
+                    <div id="list-top-rated" class="movies-scroller">
+
+                        <div class="movie-item-v2">
+
+                            <div class="wrapper">
+                               <img src="./img/at-walker-r.webp" width="250" alt="T1"> 
+                             
+                               <div class="cuerpo">
+                                 <p class="itemName">AT-walker</p>
+                                 <p class="itemID">#1501 </p>
+                              </div>
+                            </div>
+
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                              <img src="./img/binary-computer-c.webp" width="250" alt="T2"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">Binary computer</p>
+                                 <p class="itemID">#1502 </p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                              <img src="./img/electronic-components-c.webp" width="250"  alt="T3"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">Electronic components</p>
+                                 <p class="itemID">#1503</p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                              <img src="./img/hello-darkness-r.webp"  width="250" alt="T4 "> 
+
+                            <div class="cuerpo">
+                                <p class="itemName">Hello Darkness </p>
+                                <p class="itemID">#1504</p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                              <img src="./img/rabbit-or-duck-r.webp" width="250" alt="T5"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">Rabbit or duck </p>
+                                 <p class="itemID">#1505</p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                             <img src="./img/intelligence-r.webp" width="250" alt="T6"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">Intelligence </p>
+                                 <p class="itemID">#1506</p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/atwalker-hawaiian-c.webp" width="250" alt="T7"> 
+                               <div class="cuerpo">
+                                 <p class="itemName">Walkers Hawaiian </p>
+                                 <p class="itemID">#1507</p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/capybara-c.webp" width="250" alt="T8"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">Capibara </p>
+                                 <p class="itemID">#1508</p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/circuit-board-green2-c.webp" width="250" alt="T9"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">Circuit Board </p>
+                                 <p class="itemID">#1509</p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/funny-rabbit-hand-shadow-r.webp" width="250" alt="T10"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">Rabbit Hands Shadow </p>
+                                 <p class="itemID">#1510 </p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/lunar-surface-c.jpg" width="250"  alt="T11"> 
+                               <div class="cuerpo">
+                                 <p class="itemName">Lunar Surface </p>
+                                 <p class="itemID">#1511 </p>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/nebula-outer-space-c.webp" width="250" alt="T12">
+
+                            <div class="cuerpo">
+                                <p class="itemName">Nebula </p>
+                                <p class="itemID">#1512 </p>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/six-instruments-r.jpg" width="250" alt="T13"> 
+
+                               <div class="cuerpo">
+                                  <p class="itemName">Six Instruments </p>
+                                  <p class="itemID">#1513 </p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/octopus-jellyfish-c.webp" width="250"  alt="T14"> 
+
+                                <div class="cuerpo">
+                                  <p class="itemName">Octopus & Jellyfish </p>
+                                  <p class="itemID">#1514 </p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                           <div class="wrapper">
+                              <img src="./img/ufos-blueprint-c.webp" width="250" alt="T15"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">UFO'S </p>
+                                 <p class="itemID">#1515 </p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                           <div class="wrapper">
+                              <img src="./img/the-matrix-c.webp" width="250"  alt="T16"> 
+
+                              <div class="cuerpo">
+                                 <p class="itemName">The Matrix </p>
+                                 <p class="itemID">#1516</p>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/no-signal-r.webp" width="250"  alt="T17">
+ 
+                               <div class="cuerpo">
+                                 <p class="itemName">No Signal </p>
+                                 <p class="itemID">#1517</p>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="movie-item-v2">
+                            <div class="wrapper">
+                               <img src="./img/the-fighter-sunset-r.webp" width="250" alt="T18"> 
+
+                               <div class="cuerpo">
+                                 <p class="itemName">Tie Fighter at Sunset </p>
+                                 <p class="itemID">#1518</p>
+                               </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+ </section>
+
+
+ <footer class="mytheme">
+   <div class="myfooter">
+      <!-- automatic js filled -->
+  </div>   
+ </footer>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./js/geek.js"> </script>
+<script src="./js/api.js"></script>
+
+</body>
+</html>
