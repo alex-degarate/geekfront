@@ -1,0 +1,517 @@
+/*
+  Aca van todos los estilos que sobreviven a la depuracion 
+
+  Lo ultimo que voy a poner son los dan estilo responsivo, media query etc.
+*/
+
+ * { margin:0;
+     padding:0;
+     box-sizing: border-box;
+ }
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#f0f0f0; 
+  }
+
+
+main { /* margin-left: 5px; */
+       line-height: 1.5;
+       font-size: 16px;
+     }
+
+.fa {
+    display: inline-block;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1;
+    font-family: 'FontAwesome';
+    font-size-adjust: none;
+    font-kerning: auto;
+    font-variant-alternates: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-language-override: normal;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    text-rendering: auto;
+}
+
+.mytheme { background-color: #ff711a;  /* !important; #009688; */
+          }
+
+#miheader { background-color: #b35600; /*  #ff711a; #009688; */
+           color: white;
+           width: 100%;        
+           position: fixed; 
+           top: 0;               
+           z-index: 100;
+        }
+
+.myfooter {     
+      color: white;
+      box-sizing: border-box;
+      overflow: visible;
+      padding: 2px 0px 2px 10px; 
+      width: 100%;          
+      font-size: 9pt;
+      bottom: 0;          
+    }
+
+/* MENU DE NAVEGACION */
+ .topnav {  
+        background-color: black;   
+        font-size: 12.5pt;
+    /* height 42px ** NUNCA ** definir una altura, xq el menu no puede flotar */
+       }
+
+ .topnav a {
+         display: inline-block;
+         color: #f2f2f2;
+         text-align: center;
+         padding: 8px 16px;
+         text-decoration: none;
+       }
+
+ .topnav a:hover { color: black;
+             background-color: #ddd;
+        }
+
+ .topnav > .shop { padding: 1px 10px 1px 10px; }
+ 
+ .img-cart { color: white;
+          background-color: #ddd !important;
+        }
+
+ .right { float: right;
+         display: inline-block;
+         margin : 0 auto;
+       }
+
+ .orange { background-color: #ff711a; }
+
+ h1,h2,h5 { 
+      font-family: Arial, sans-serif;
+      font-weight: 400;
+      text-align: center;
+      color: black;
+   }
+
+h1 { font-size: 26pt; }
+
+ #my { font-size: 80px; }
+
+ .big { font-size: 50px; }
+
+
+.asideL {
+/*  background-color: #33b5e5; */
+  padding: 5px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+}
+
+.asideR {
+  background-color: #ffffe6;
+/*  padding: 8px 10px;*/ 
+  padding: auto 10px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  align-items: center;
+}
+
+
+.terms {  font-family: Arial, sans-serif;
+          font-size: 8pt;}
+
+.p9  { font-size: 9pt;}
+.p10 { font-size: 10pt; }
+.p11 { font-size: 11pt; }
+.p12 { font-size: 12pt; }
+.p13 { font-size: 13pt; }
+.px18{ font-size: 18px; } /* 13.5pt */
+.p16 { font-size: 16pt; }
+.p18 { font-size: 18pt; }
+.p20 { font-size: 20pt; }
+.p36 { font-size: 36pt; }
+.px12 { font-size: 12px; }
+
+.rad-label {
+  border-radius: 100px;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: .3s;
+  /* ADDED */
+  font-size: 9pt;
+  letter-spacing: 0.1px;
+}
+
+/*
+ &ensp; HTML entity is about two spaces wide 
+ &emsp; HTML entity is about four spaces wide. */
+
+.white { color: white; }
+.red   { color: red; }
+.blue  { color: blue; }
+.wine  { color: #990033; }
+
+.bg-red { background-color: red; }
+
+
+.div-center { margin: 0 auto; }
+
+.centro, .acenter { text-align: center; }
+
+.left, .aleft { text-align: left; }
+.dercha, .aright { text-align: right; 
+             padding-right: 20px; }
+
+.fright { float: right; }
+
+.pad10 { padding-left: 10px; }
+      
+iframe { border: 1px solid gray;}
+
+
+.img-centro { /* display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; 
+      flex-wrap: wrap; */
+      display: block;
+      width: 205px;
+      height:190px;
+      margin: 0 auto;
+      padding:0;
+}
+
+
+.din-block { display: inline-block; }
+.dblock { display: block; }
+.dinline { display: inline; }
+
+.danger { padding-left: 10px;
+          color: white ;
+          background-color: red;
+          margin: 8px auto;
+          width: 300px;
+     }
+ 
+
+
+/*-------------- FORM ------------------*/
+
+form { font-family:Georgia, "Times New Roman", Times, serif; }
+
+legend { font-family:Arial, Helvetica, sans-serif; 
+         background-color:#9b9b9e;
+         color: white
+     }
+
+input, select {
+	display: block;
+	margin-bottom: 1em;
+      }
+
+fieldset {
+	margin-bottom: 8px;
+	padding: 1em 1em 1em 2em; /* left 2em */
+    background-color:#ffffe6;
+  }
+
+fieldset fieldset {
+	margin-top: 1em;
+	margin-bottom: 0.2em;
+      }
+
+input[type="text"] {
+     text-transform: uppercase;
+     font-family: Ubuntu, Arial;
+     font-size: 13px;
+   }
+
+input[type="checkbox"] {
+	display: inline;
+      }
+
+input[type="submit"] {
+     font-family: Ubuntu, Arial;
+     font-size: 13px;
+     line-height: 18px;;     
+	 display: block;
+     margin: 0 auto;
+     padding: 8px 10px; 
+   }
+
+::placeholder { /* Recent browsers */
+    text-transform: none;
+  }
+
+.range { margin-bottom:1em; }	
+
+.card-type input, .card-type label {
+	display: inline-block; 
+       }
+
+label {  font-size: 16px;  /* 3pt */ 
+}
+
+input[type="radio"] {
+	display: inline;
+        margin: 4px;
+     }
+
+input[type="checkbox"] {
+	display: inline;
+      }
+
+input[type="email"], input[type="tel"] {
+       font-family: Ubuntu, Arial;
+       font-size: 13px;
+       display: inline;
+       line-height: 18px;;
+      }
+
+input[type="date"] {
+       font-family: monospace, Arial;
+       font-size: 13px;
+       line-height: 20px;;
+      }
+
+input[type="submit"] {
+	display: block;
+         margin: 0 auto;
+        padding: 8px 10px; 
+      }
+
+
+.range { margin-bottom:1em; }	
+
+.card-type input, .card-type label {
+	display: inline-block; 
+       }
+ 
+label[for] {font-size: 10pt; }
+
+.panel-left {
+     width:72%; 
+     height: 400px; 
+     float:left;
+   }
+
+.panel-right { 
+     width:28%; 
+     height: 400px; 
+     float: right;
+     padding-top: 10px;
+   }
+
+.foton { 
+     display: block;
+     margin-left: 20px; 
+     border: 1px solid red;
+     width: 125px;
+     height: 167px;
+   }
+      
+.form-main {
+    width: 65%; 
+    height: 525px; 
+    margin: 0 auto;
+  }
+
+.gender {
+    width: 13.7vw; 
+    font-size: 10pt; 
+    padding-left: 20px;  
+  }
+
+.fld-gender {
+    margin-bottom: 8px;
+    padding: 2px; /* left 2em */
+  }
+
+.photo-bg { background-color: lightgray; /* #9b9b9e; */
+            border: 1px solid red;
+          }
+
+/*--- End FORM ------------------------------*/
+
+
+.blackie { 
+   display: block;
+   background-color: black;
+   padding: 8px 10px;
+   color: white;
+   text-align: center;
+   font-size: 10pt;
+/*   max-height: 200px; */
+ }
+
+
+#version { color: yellow; }
+
+#avatar {
+  vertical-align: middle;
+  width: 167px;
+  height: 167px;
+  border-radius: 50%;
+}
+
+.social { 
+    margin: 0 auto;
+    text-align: right;
+    font-size: 20px;
+  }
+
+.social .fa { 
+    margin: 10px 12px 5px 5px;
+    font-size: 26px;
+    color: white;
+  }
+
+.g20-ribbon { 
+    background-color: #ff711a; 
+    display: inline-block;
+    font-size: 9pt;
+    text-align: right; 
+    padding-right: 24px;        
+  }
+
+
+.fa-home-hover {
+  -webkit-animation:fa-spin 1s 1 linear;
+  animation:fa-spin 1s 1 linear;
+ /* animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;*/
+ }
+
+.fa.fa-twitterx {
+	font-family:sans-serif;
+ }
+
+.fa.fa-twitterx::before{
+    display: inline-block;
+    content: "𝕏";
+  }
+
+.fa.fa-tiktok {
+    height: 16px; 
+   /* vertical-align: -0.1em; */
+ }
+
+.fa.fa-tiktok::before {
+    display: inline-block;
+    width: 18px;
+    height: 16px;    
+    content: url('../img/tiktok.svg');  
+}
+
+.volver {
+    color: black; 
+    font-size: 9pt;
+    padding: 2px 4px;
+    text-decoration: none;
+ }
+
+ a.sucur {text-decoration:none;}
+
+/* table en show_data */
+
+ table, th, tr, td {
+     border: 1px solid black; 
+     border-collapse: collapse; 
+     font-family: sans-serif;
+     padding: 5px 10px;
+  }
+
+ th, th, tr, td { 
+     text-align: center; 
+  }
+
+ caption{
+     font-size: 18pt;
+     background-color: navy; 
+     color: white;
+ }
+
+ th { 
+     background-color: lightgray;
+     color: red;
+     font-weight: normal;
+  }
+
+ tr:nth-child(even) {
+     background-color: #e0efd4;
+     color: black;
+  }
+
+ button >a {  text-decoration: none;}
+/* end show_data*/
+
+
+/* api consume */
+
+.api-contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly ;
+    grid-gap: 50px 10px;
+}
+
+.api-tarjeta {
+    width: 250px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    overflow: hidden;
+  }
+
+.api-tarjeta img {
+    width: 100%;
+   }
+
+.api-cuerpo { margin: 18px 10px 10px 10px;
+     }
+
+
+#tjname { font-size: 16px !important; /* h4 */
+          font-weight: 700 !important;
+          color: black !important;
+          margin-top: 9px !important;
+          line-height: 24px !important; 
+        }
+
+#tjstat { font-size: 12px !important; /* h5 */
+          font-weight: 400 !important;
+          line-height: 20px !important;     
+        }
+
+#tjid { font-size: 12px !important;  /* h5 */
+        font-weight: 400 !important;
+        line-height: 20px !important;
+        color: black !important;
+        text-align: left;
+      }
+/* end api consume */
+
+#top-rated {
+     background-color: #e9e9e9;
+    }
+
+
+
+
+
