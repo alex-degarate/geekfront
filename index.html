@@ -2,95 +2,185 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scg20=1.0">
   <link rel="icon" href="./img/shirt-icon.png" type="image/x-icon">
-  <link rel="stylesheet" 
-     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/geek.css">
-
-  <title> Remeras GEEK </title>
+  <title> GEEK-R6 </title>
 
  <style>
- </style>
+/* --- inicio responsive --- */
 
+.row::after {
+  content: "";
+  clear: both; 
+  display: table;
+}
+
+ 
+ [class*="col-"] {
+  float: left;
+  padding: 1px;
+}
+
+
+/* en firefox no me funciona display: block; */
+/* [< 600] For old mobile phones: bg rosa */ 
+
+@media screen and (max-width: 600px) {
+
+ .topnav a { 
+       display: block !important; 
+       text-align: left !important; 
+       float: none; 
+     } 
+
+  bodys { background-color: #ffe8ff; }
+}
+
+
+/* [< 768] For small mobile phones & small tablets : bg lavender */
+
+@media screen and (max-width: 768px) and (min-width: 601px) {
+
+  bodys { background-color: lavender; }
+}
+
+
+/* [< 992] For small mobile phones & small tablets : bg celeste claro #e6ffff  */
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+
+  bodys { background-color: #e6ffff;  }
+}
+
+
+/* [> 1024] For mobile phones & tablets : bg verde claro #e6ffe6; */
+
+@media screen and (min-width: 1020px) {
+
+  body { 
+         background-color: #f0f0f0; 
+       }
+}
+
+
+@media only screen and (min-width: 700px) {  /* entonces >=   */
+  /* For desktop: */
+
+  .col-1 {width: 8.33%;}  /*  100/12  */
+  .col-2 {width: 16.66%;} /* 100/2*2  */
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/*  -- testear y sacar
+/*  100/12  */
+/*
+  .col-005 {width:  5%; }  
+  .col-010 {width: 10%; }  
+  .col-015 {width: 15%; }
+  .col-020 {width: 20%; }
+  .col-025 {width: 25%; }
+  .col-030 {width: 30%; }
+  .col-035 {width: 35%; }
+  .col-040 {width: 40%; }
+  .col-045 {width: 45%; }
+  .col-050 {width: 50%; }
+  .col-055 {width: 55%; }
+  .col-060 {width: 60%; }
+  .col-065 {width: 65%; }
+  .col-070 {width: 70%; }
+  .col-075 {width: 75%; }
+  .col-080 {width: 80%; }
+  .col-085 {width: 85%; }
+  .col-090 {width: 90%; }
+  .col-095 {width: 95%; }
+  .col-100 {width:100%; }
+*/
+
+/* ----  fin reponsive ---- */
+
+.fa.fa-tiktok {
+    height: 16px; 
+   /* vertical-align: -0.1em; */
+ }
+
+.fa.fa-tiktok::before {
+    display: inline-block;
+    width: 18px;
+    height: 16px;    
+    content: url('./img/tiktok.svg'); /* "\f043"; */
+}
+</style>
 </head>
 
 <body>
-
-<header id="miheader">
-
-<!-- Navbar -->
-<div class="w3-top">
-
- <div class="w3-bar w3-theme-d2 w3-left-align">
-
-  <a href="./index.html" class="w3-bar-item w3-button w3-teal mytheme">
-     <i class="fa fa-home" style="font-size:20px; "  ></i></a>
-
-  <a href="./gallery.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Galeria</a>
-  <a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Empresa</a>
-  <a href="./template.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
-  <a href="./template.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Registro</a>
-
-   <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i>
-      </button>     
-
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-        <a href="#" class="w3-bar-item w3-button">Link</a>
-        <a href="#" class="w3-bar-item w3-button">Link</a>
-        <a href="#" class="w3-bar-item w3-button">Link</a>
-      </div>   
-   </div>
-
-      <!-- class=" w3-button w3-teal mytheme" -->
-   <div style="float: right; height: 40px;" class="w3-teal">
-      <a href="./shop.html" class="w3-teal" > 
-      <img class="img.cart" src="./img/cart2.svg"></a>
-   </div>
- 
-   <!-- div style="height:40px; width: 60px; float:right; background-color: yellow;"> 1 </div 
-  class="w3-teal" -->
-
- </div>
-
-</div>
-
-</header>
-
-<br>
-<br>
-    <h1>Remeras premium </h1>
-
+  <header id="header">
+  </header>
 
 <main>
 
-   <div id="container">
+<div class="row" style="height: 78vh;">
 
-     <div class="t-shirt" >
+  <div class="col-1">
+    <div class="asideL"> </div>
+  </div>
 
-      <a href="#" ><img class="G20" src="./img/6da383.webp" 
-            width="300" height="auto"  alt="."> </a>
-      <a href="#" ><img class="G20" 
-          src="./img/binary-computer-1s-and-0s-891752.webp"
-            width="300" height="auto"  alt="."> </a>
-      <a href="#" ><img class="G20"
-          src="./img/electronic-components-151304.webp"
-            width="300" height="auto"  alt="."> </a>
-     </div>
+  <div class="col-9">
+<br>
+<br>
+ <!-- h4 style="color: red; display: inline;"> Testear responsive para las otros tamaños (@media)</h4 -->
 
-   </div>
+    <h1> Remeras premium  GEEK</h1>
+    <br> 
+    <br>
+    
+ <a href="#"><img class="G20" src="./img/at-walker-r.webp" width="300" height="300"  alt="tshirt-1"> </a>
 
-      <h5 id="my"> GEEK</h5>
+ <a href="#"><img class="G20" src="./img/binary-computer-c.webp"
+            width="300" height="300"  alt="tshirt-2"> </a>
+  </div>
+         <!-- src="./img/electronic-components-c.webp"
+            width="300" height="300"  alt="tshirt-3"> </a -->
+
+
+  <div class="col-2">
+    <div class="asideR">
+     <span> g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20  
+            g20 g20 g20 g20 g20 g20 g20 g20</span>
+     <h1 class="big">Space  for  Sale</h1>
+     <span> g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20  
+            g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20 g20</span>
+    </div>
+  </div>
+
+</div>
+
+ <br>
 
 </main>
 
-
- <footer class="mytheme">
+<footer class="">
+   <div class="blackie">
+    Geek.com | &copy; Geek Inc. &emsp;1810-2024 Worldwide Reseved Rights <br>
+    Fábrica Dirección: Loma de los Quinotos sin número, Virrey del Vino, República Argentina<br>
+    Teléfono: (+54-9) 9999-9999 | e-mail: geek-inc@yimail.com - Actualizado: 
+     <span id="version">-</span>
+   </div>
 
    <div class="mytheme myfooter">
+      <!-- automatic js filled -->
 
      <div class="social">
        <a href="./index.html"> <i class="fa fa-home"></i></a>
@@ -98,12 +188,19 @@
        <a href="https://whatsapp.com/geek/"> <i class="fa fa-whatsapp"></i></a>
        <a href="https://telegram.com/geek/"> <i class="fa fa-telegram"></i></a>
        <a href="https://linkedin.com/geek/"> <i class="fa fa-linkedin"></i></a>
-  <a href="shop.html"><img src="./img/cart2.svg"></a>
+       <a href="https://tiktok.com/geek/">   <i class="fa fa-tiktok"></i></a>
      </div>
-    <p class ="dercha">&copy; 2024 Grupo-20 &emsp; </p>
+
+     <p class="aright">&copy; 2024 Grupo-20 &emsp; </p>
   </div>
    
- </footer>
+</footer>
+
+<script src="./js/geek.js"> </script>
+<script>
+ document.getElementById("version").innerHTML = formatFecha( new Date());
+</script>
 
 </body>
 </html>      
+
