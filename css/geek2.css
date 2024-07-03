@@ -1,0 +1,100 @@
+/* geek2.css             */
+/* final project backend */
+
+ main { background-color:#f0f0f0 ;}
+
+/* #009688; teal color*/
+.orange { background-color: #ff711a; } 
+
+#falta {
+    font-family: Monospace, Courier;
+    font-size: 14px;
+    background-color: #ffffe6;
+    margin:10px auto ; 
+    width: 650px; 
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    line-height: 1.0;
+   }
+
+#fmodif {
+    font-family: Monospace, Courier;
+    font-size: 14px;
+    background-color: #ffffe6;
+    margin:10px auto ; 
+    width: 580px; 
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    line-height: 1.0;
+    -moz-appearance: textfield !important;
+   }
+
+#flogin {
+    font-family: Monospace, Courier;
+    background-color: #ffffe6;
+    margin: 10px auto ; 
+    width: 400px; 
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+#rform2 {
+    font-family: Monospace, Courier;
+    background-color: #ffffe6;
+    margin: 10px auto ; 
+    width: 400px; 
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+
+.volver {
+    color: black; 
+    font-size: 9pt;
+    padding: 2px 4px;
+    text-decoration: none;
+    margin: 4px 14px;
+ }
+
+#titulo { 
+     font-family: Monospace, Courier;
+     font-size: 23px; 
+     text-align: center;
+    }
+
+#footbar {
+     height: 36px;
+     background-color: #ff711a;
+   }
+
+.g20-ribbon { 
+    background-color: #ff711a; 
+    color: white;
+    display: inline-block;
+    font-size: 9pt;
+    text-align: right; 
+    padding-right: 24px;        
+  }
+
+#imagen { font-size: 12px; }
+
+#c1 { text-align: center !important;
+      font-family: Monospace, Courier;       
+     }
+
+img.absolute2 {
+   position: absolute;  
+   bottom: 80px;
+   right: 230px;
+ }
+
+img.absolute1 {
+   position: absolute;  
+   bottom: 210px;
+   right: 230px;
+ }
+
