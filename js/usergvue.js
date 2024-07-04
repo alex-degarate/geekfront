@@ -60,7 +60,7 @@ createApp({
             }
             fetch(this.url, options)
                 .then(function () {
-                    alert("Registro grabado")
+                  //  alert("Registro grabado")
                     window.location.href = "./usergvue.html";
                 })
                 .catch(err => {
@@ -104,7 +104,7 @@ createApp({
 //alert("encontrado\n"+ this.usuarios[i].id+" "+this.usuarios[i].username +" "+ this.usuarios[i].clave);
 
                   if( this.usuarios[i].clave == this.clave ){
-                      alert("entro papa");
+                       
                       if( this.usuarios[i].rol > 100){
                           sessionStorage.setItem("usr", this.usuarios[i].username );     
                           sessionStorage.setItem("lev", this.usuarios[i].rol);
