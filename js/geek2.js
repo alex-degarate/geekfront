@@ -21,7 +21,7 @@ sNav = sNav + `
      <a href="./login.html"    class="w3-bar-item w3-button w3-hide-small w3-hover-white">Login</a>
 
      <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-button" title="Notifications" id="crud" style="display: yes;">Administ 
+        <button class="w3-button" title="Notifications" id="crud" style="visibility: hidden;">Administ 
         <i class="fa fa-caret-down"></i>
         </button>     
 
@@ -31,7 +31,7 @@ sNav = sNav + `
           <a href="" id="logout" onclick="logout()" class="w3-bar-item w3-button">Logout</a> 
          
           <a href="usergvue.html" id="crud2" class="w3-bar-item w3-button"
-            style="display: yes;">Usuarios </a>
+            style="visibility: hidden;">Usuarios </a>
         </div>
      </div>
 
@@ -175,29 +175,32 @@ function logout()
   sessionStorage.removeItem("usr");
   sessionStorage.removeItem("lev");
   sessionStorage.removeItem("adm");
-  document.querySelector("#crud2").setAttribute('style', 'display: none')
-  document.querySelector("#crud").setAttribute('style', 'display: none')
+  document.getElementById("crud2").style.visibility = 'hidden';
+  document.getElementById("crud").style.visibility = 'hidden';
   window.open("./index.html");
 }
 
 // check
-/*
+
 if (sessionStorage.getItem("adm")!="1"){
    // not login 
-   document.querySelector("#crud").setAttribute('style', 'display:none')
+   //document.getElementById("crud").style.visibility = 'hidden';
 }else{
    // login inside 
    let nivel = parseInt( sessionStorage.getItem("lev") );
    // alert("nivel" + nivel);
    if( nivel > 900) {
-       document.querySelector("#crud").setAttribute('style', 'display:yes')
-       document.querySelector("#crud2").setAttribute('style', 'display:yes')
+       document.getElementById("crud").style.visibility = 'visible';
+       document.getElementById("crud2").style.visibility = 'visible';
    }
    else
       if( nivel > 100 && nivel < 900)
-          document.querySelector("#crud").setAttribute('style', 'display:yes')     
+         document.getElementById("crud").style.visibility = 'visible';
+ }
+
+function Today() {
+   return formatDate( new Date());
 }
-*/
 
  
 
