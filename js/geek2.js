@@ -12,7 +12,7 @@ sNav = sNav + `
    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"    
       href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
 
-     <a href="./index.html"" class="w3-bar-item w3-button orange">
+     <a href="./index.html"" class="w3-bar-item w3-button" style="background-color: #ff711a;">
       <i class="fa fa-home" style="font-size: 18px"></i></a>
      <a href="./company.html"  class="w3-bar-item w3-button w3-hide-small w3-hover-white">Empresa</a>
      <a href="./contact.html"  class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
