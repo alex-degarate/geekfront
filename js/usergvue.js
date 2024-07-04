@@ -8,7 +8,7 @@ createApp({
             usuarios: [],
             // esto es para el boton modificar +(location.search.substr(4)===""?'':"/")    
             // +location.search.substr(4)
-            url: 'http://adegarate.pythonanywhere.com/usuarios',
+            url: 'https://adegarate.pythonanywhere.com/usuarios',
             error: false,
             cargando: true,
             /*alta*/
