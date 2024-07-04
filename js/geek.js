@@ -1,4 +1,6 @@
+var datos;
 
+/*
 // Array de objetos con las remeras/camisas para el carrousel 
 let data = [
     {
@@ -216,6 +218,9 @@ let data = [
         creado: ""
     }
 ];
+*/
+
+
 
 // header construction
 /*
@@ -309,13 +314,13 @@ document.getElementById("header").innerHTML = sNav;
 
 //document.querySelector("#version").innerHTML = formatFecha( dToday);
 
-
+/*
 //---- arma las cards 
  cad = ``;
 
 function drawCards()
 {
-  for( let item of data) {
+  for( let item of datos) {
 
     ini = `<div class="tarjeta">
      <img src=${item.imagen} alt=${item.nombre}>
@@ -329,6 +334,9 @@ function drawCards()
   }
  return cad;
 }
+
+drawCards();
+*/
 
 // debido a inexplicable "error" puse la linea inferior en carousel.html
 //document.querySelector(".contenedor").innerHTML = cad;
