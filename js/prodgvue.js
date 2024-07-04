@@ -31,7 +31,7 @@ const { createApp } = Vue
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
-                alert("" +Today());
+              //  alert("" +Today());
                     this.productos = data;
                     this.cargando  = false
                 })
