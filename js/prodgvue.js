@@ -8,7 +8,7 @@ const { createApp } = Vue
         //url:' http://localhost:5000/productos ',
         // si el backend esta corriendo local usar localhost 5000(si no lo subieron a
         // pythonanywhere)
-        url:'http://adegarate.pythonanywhere.com/productos',
+        url:'https://adegarate.pythonanywhere.com/productos',
         // si ya lo subieron a pythonanywhere
         error:false,
         cargando:true,
