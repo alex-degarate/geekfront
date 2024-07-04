@@ -21,7 +21,8 @@ sNav = sNav + `
      <a href="./login.html"    class="w3-bar-item w3-button w3-hide-small w3-hover-white">Login</a>
 
      <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-button" title="Notifications" id="crud" style="visibility: hidden;">Administ 
+        <button class="w3-button" title="Notifications" id="crud" 
+        style="visibility: hidden; display: none">Administ 
         <i class="fa fa-caret-down"></i>
         </button>     
 
@@ -142,32 +143,9 @@ document.getElementsByClassName("myfooter").innerHTML = navf;
 
 //** old *** querySelector(".myfooter").innerHTML = navf;
 
-function enableCRUDprod() 
-{
-  let nivel = parseInt( sessionStorage.getItem("lev") ) 
-  if( nivel < 100 ) {
-      document.querySelector("#crud").setAttribute('style', 'display:none')
-  } else {
-      document.querySelector("#crud").setAttribute('style', 'display:on')
-  }
-}
 
 
-function enableCRUDuser() 
-{
-  let nivel = parseInt( sessionStorage.getItem("lev") )
-  alert("nivel" + nivel)
-  if( nivel < 900 ) {
-      document.querySelector("#crud").setAttribute('style', 'display:none')
-      document.querySelector("#crud2").setAttribute('style', 'display:none')
-  } else {
-      alert("entra admin")   
-      document.getElementById("crud").setAttribute('style', 'display: yes')
- //  document.querySelector("#crud").setAttribute('style', 'display:on')
-      document.querySelector("#crud2").setAttribute('style', 'display:on')
-  }
-}
- 
+
 
 function logout() 
 {
@@ -177,6 +155,7 @@ function logout()
   sessionStorage.removeItem("adm");
   document.getElementById("crud2").style.visibility = 'hidden';
   document.getElementById("crud").style.visibility = 'hidden';
+  document.getElementById("crud").style.display = 'none';
   window.open("./index.html");
 }
 
@@ -184,18 +163,21 @@ function logout()
 
 if (sessionStorage.getItem("adm")!="1"){
    // not login 
-   //document.getElementById("crud").style.visibility = 'hidden';
+   document.getElementById("crud").style.display = 'none';
 }else{
    // login inside 
    let nivel = parseInt( sessionStorage.getItem("lev") );
    // alert("nivel" + nivel);
    if( nivel > 900) {
+       document.getElementById("crud").style.display = 'block';
        document.getElementById("crud").style.visibility = 'visible';
        document.getElementById("crud2").style.visibility = 'visible';
    }
    else
-      if( nivel > 100 && nivel < 900)
+      if( nivel > 100 && nivel < 900) {
+         document.getElementById("crud").style.display = 'block';
          document.getElementById("crud").style.visibility = 'visible';
+      }
  }
 
 function Today() {
