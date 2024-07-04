@@ -17,7 +17,7 @@ const { createApp } = Vue
         precio: 0,
         imagen:"",
         ultmod: "",  
-        url:'http://adegarate.pythonanywhere.com/productos/'+id, 
+        url:'https://adegarate.pythonanywhere.com/productos/'+id, 
        }
     },
     //
