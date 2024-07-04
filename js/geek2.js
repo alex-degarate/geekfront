@@ -184,7 +184,7 @@ function logout()
 /*
 if (sessionStorage.getItem("adm")!="1"){
    // not login 
-   // document.querySelector("#crud").setAttribute('style', 'display:none')
+   document.querySelector("#crud").setAttribute('style', 'display:none')
 }else{
    // login inside 
    let nivel = parseInt( sessionStorage.getItem("lev") );
