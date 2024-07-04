@@ -68,214 +68,29 @@
 <!-- ........................................................................................... -->
 
 
-    <section id="top-rated">
+ <section id="top-rated">
                  
-                <p style="font-size: 24px; text-align: center;"><br>Las más populares</p>
-                <br>
-                <div class="container">
+            <p style="font-size: 24px; text-align: center;"><br>Las más populares</p>
+            <br>
+            <div class="container">
                                         
-                    <div id="list-top-rated" class="movies-scroller">
+                  <div id="list-top-rated" class="movies-scroller">
 
-                        <div class="movie-item-v2">
+                       <div v-for="shirt in datos" class="movie-item-v2">
 
                             <div class="wrapper">
-                               <img src="./img/at-walker-r.webp" width="250" alt="T1"> 
-                             
+                               <img :src="shirt.imagen"  width="250" :alt="T1"> 
                                <div class="cuerpo">
-                                 <p class="itemName">AT-walker</p>
-                                 <p class="itemID">#1501 </p>
-                              </div>
-                            </div>
-
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                              <img src="./img/binary-computer-c.webp" width="250" alt="T2"> 
-
-                               <div class="cuerpo">
-                                 <p class="itemName">Binary computer</p>
-                                 <p class="itemID">#1502 </p>
+                                 <p class="itemName"> {{shirt.nombre}}</p>
+                                 <p class="itemID">&nbsp; #{{ shirt.id+1500}} </p>
                                </div>
                             </div>
-                        </div>
 
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                              <img src="./img/electronic-components-c.webp" width="250"  alt="T3"> 
+                      </div>
 
-                               <div class="cuerpo">
-                                 <p class="itemName">Electronic components</p>
-                                 <p class="itemID">#1503</p>
-                               </div>
-                            </div>
-                        </div>
+                  </div>
 
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                              <img src="./img/hello-darkness-r.webp"  width="250" alt="T4 "> 
-
-                            <div class="cuerpo">
-                                <p class="itemName">Hello Darkness </p>
-                                <p class="itemID">#1504</p>
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                              <img src="./img/rabbit-or-duck-r.webp" width="250" alt="T5"> 
-
-                               <div class="cuerpo">
-                                 <p class="itemName">Rabbit or duck </p>
-                                 <p class="itemID">#1505</p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                             <img src="./img/intelligence-r.webp" width="250" alt="T6"> 
-
-                               <div class="cuerpo">
-                                 <p class="itemName">Intelligence </p>
-                                 <p class="itemID">#1506</p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/atwalker-hawaiian-c.webp" width="250" alt="T7"> 
-                               <div class="cuerpo">
-                                 <p class="itemName">Walkers Hawaiian </p>
-                                 <p class="itemID">#1507</p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/capybara-c.webp" width="250" alt="T8"> 
-
-                               <div class="cuerpo">
-                                 <p class="itemName">Capibara </p>
-                                 <p class="itemID">#1508</p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/circuit-board-green2-c.webp" width="250" alt="T9"> 
-
-                               <div class="cuerpo">
-                                 <p class="itemName">Circuit Board </p>
-                                 <p class="itemID">#1509</p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/funny-rabbit-hand-shadow-r.webp" width="250" alt="T10"> 
-
-                               <div class="cuerpo">
-                                 <p class="itemName">Rabbit Hands Shadow </p>
-                                 <p class="itemID">#1510 </p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/lunar-surface-c.jpg" width="250"  alt="T11"> 
-                               <div class="cuerpo">
-                                 <p class="itemName">Lunar Surface </p>
-                                 <p class="itemID">#1511 </p>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/nebula-outer-space-c.webp" width="250" alt="T12">
-
-                            <div class="cuerpo">
-                                <p class="itemName">Nebula </p>
-                                <p class="itemID">#1512 </p>
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/six-instruments-r.jpg" width="250" alt="T13"> 
-
-                               <div class="cuerpo">
-                                  <p class="itemName">Six Instruments </p>
-                                  <p class="itemID">#1513 </p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/octopus-jellyfish-c.webp" width="250"  alt="T14"> 
-
-                                <div class="cuerpo">
-                                  <p class="itemName">Octopus & Jellyfish </p>
-                                  <p class="itemID">#1514 </p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                           <div class="wrapper">
-                              <img src="./img/ufos-blueprint-c.webp" width="250" alt="T15"> 
-
-                               <div class="cuerpo">
-                                 <p class="itemName">UFO'S </p>
-                                 <p class="itemID">#1515 </p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                           <div class="wrapper">
-                              <img src="./img/the-matrix-c.webp" width="250"  alt="T16"> 
-
-                              <div class="cuerpo">
-                                 <p class="itemName">The Matrix </p>
-                                 <p class="itemID">#1516</p>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/no-signal-r.webp" width="250"  alt="T17">
- 
-                               <div class="cuerpo">
-                                 <p class="itemName">No Signal </p>
-                                 <p class="itemID">#1517</p>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="movie-item-v2">
-                            <div class="wrapper">
-                               <img src="./img/the-fighter-sunset-r.webp" width="250" alt="T18"> 
-
-                               <div class="cuerpo">
-                                 <p class="itemName">Tie Fighter at Sunset </p>
-                                 <p class="itemID">#1518</p>
-                               </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+            </div>
  </section>
 
 
@@ -286,8 +101,10 @@
  </footer>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="./js/geek.js"> </script>
 <script src="./js/api.js"></script>
-
+<script src="./js/geek.js"> </script>
+<script src="./js/geek2.js"> </script>
+<script>
+</script>
 </body>
 </html>
