@@ -31,6 +31,7 @@ const { createApp } = Vue
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
+                alert("" +Today());
                     this.productos = data;
                     this.cargando  = false
                 })
@@ -55,7 +56,7 @@ const { createApp } = Vue
         },
         //
         grabar(){
-                alert(typeof(this.stock))
+
             let producto = {
                 code:  this.code,
                 nombre: this.nombre,
@@ -64,7 +65,7 @@ const { createApp } = Vue
                 stock: this.stock,
                 precio: this.precio,
                 imagen: this.imagen,
-                ultmod: Today() //this.ultmod
+                ultmod: this.ultmod // Today()
             }
             var options = {
                 body:JSON.stringify(producto),
@@ -74,7 +75,7 @@ const { createApp } = Vue
             }
             fetch(this.url, options)
                 .then(function () {
-                alert("Registro grabado")
+              //  alert("Registro grabado")
                 window.location.href = "./prodgvue.html"; // recarga productos.html
             })
             .catch(err => {

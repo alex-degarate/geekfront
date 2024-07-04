@@ -8,7 +8,7 @@ createApp({
             usuarios: [],
             // esto es para el boton modificar +(location.search.substr(4)===""?'':"/")    
             // +location.search.substr(4)
-            url: 'https://adegarate.pythonanywhere.com/usuarios',
+            url: 'http://adegarate.pythonanywhere.com/usuarios',
             error: false,
             cargando: true,
             /*alta*/
@@ -24,9 +24,8 @@ createApp({
                 .then(response => response.json())
                 .then(data => {
                     this.usuarios = data;
-                    this.cargando = false
-                   
-                    console.log(this.usuarios)
+                    this.cargando = false                 
+                    //console.log(this.usuarios)
                 })
                 .catch(err => {
                     console.error(err);
@@ -105,7 +104,7 @@ createApp({
 //alert("encontrado\n"+ this.usuarios[i].id+" "+this.usuarios[i].username +" "+ this.usuarios[i].clave);
 
                   if( this.usuarios[i].clave == this.clave ){
- 
+                      alert("entro papa");
                       if( this.usuarios[i].rol > 100){
                           sessionStorage.setItem("usr", this.usuarios[i].username );     
                           sessionStorage.setItem("lev", this.usuarios[i].rol);
@@ -123,9 +122,11 @@ createApp({
             }// endwhile
 
             if( ! bFound)  
-                alert('Usuario erróneo')    
-        }
+                alert('Usuario erróneo') 
+   
+        }// end login()
     },
+    //
     created() {
         this.fetchData(this.url)
     },
