@@ -21,7 +21,7 @@ sNav = sNav + `
      <a href="./login.html"    class="w3-bar-item w3-button w3-hide-small w3-hover-white">Login</a>
 
      <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-button" title="Notifications" id="crud" style="display: none;">Administ 
+        <button class="w3-button" title="Notifications" id="crud" style="display: yes;">Administ 
         <i class="fa fa-caret-down"></i>
         </button>     
 
@@ -31,7 +31,7 @@ sNav = sNav + `
           <a href="" id="logout" onclick="logout()" class="w3-bar-item w3-button">Logout</a> 
          
           <a href="usergvue.html" id="crud2" class="w3-bar-item w3-button"
-            style="display: none;">Usuarios </a>
+            style="display: yes;">Usuarios </a>
         </div>
      </div>
 
@@ -181,11 +181,12 @@ function logout()
 }
 
 // check
+/*
 if (sessionStorage.getItem("adm")!="1"){
-   /* not login */
+   // not login 
    // document.querySelector("#crud").setAttribute('style', 'display:none')
 }else{
-   /* login inside */
+   // login inside 
    let nivel = parseInt( sessionStorage.getItem("lev") );
    // alert("nivel" + nivel);
    if( nivel > 900) {
@@ -196,6 +197,7 @@ if (sessionStorage.getItem("adm")!="1"){
       if( nivel > 100 && nivel < 900)
           document.querySelector("#crud").setAttribute('style', 'display:yes')     
 }
+*/
 
  
 
