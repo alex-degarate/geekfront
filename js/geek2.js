@@ -3,6 +3,7 @@
 //--------------------------------------------------------
 // header construction N-U-E-V-O
 //<a href="./index.html" class="topnav orange"><i class="fa fa-home fa-home-hover px18"></i>Home </a>
+var zx = " ";
 
 var sNav = ``; 
 sNav = sNav + `
@@ -38,15 +39,44 @@ sNav = sNav + `
 
      <!-- a href="./shop.html" class="right orange shop"> 
         <img class="" src="./img/cart2.svg" alt="shop cart"></a -->
-     <a href="./shop.html" class="w3-bar-item w3-button w3-hide-small w3-right" 
+
+       <div class="w3-right">
+        <a href="" id="guser" class="w3-button w3-hide-small"
+          style="display: inline-block; font-size: 10px;">Ale | 998</a>
+
+       <a href="./shop.html" class="w3-bar-item w3-button w3-hide-small w3-right" 
        style="background-color: #ff711a;" title="Shop"><i class="fa fa-shopping-cart" 
        style="font-size: 18px; color:white"></i></a>
+     </div>
 </div> `
 
+ 
 //document.querySelector("header").innerHTML = sNav;
 document.getElementById("header").innerHTML = sNav;
 
- 
+
+function clearUser() {
+  if (sessionStorage.getItem("adm")!="1") {
+      document.getElementById("guser").innerHTML = " ";
+  }
+}
+
+// get user & level and show in the bar
+function showUser() {
+  if (sessionStorage.getItem("adm") !="1") 
+  {
+     let guser = sessionStorage.getItem("usr");
+     let glev  = sessionStorage.getItem("lev");
+     // alert("->" + guser + " / " +glev );
+     document.getElementById("guser").innerHTML = guser + " / "+ glev;
+  }
+  else
+     document.getElementById("guser").innerHTML = " ";
+}
+
+ showUser();
+
+
 //--------------------------------------------------------
 // footer construction
 var sFooter = ``;
@@ -119,7 +149,10 @@ var goback = `<div><nav id="footbar">
 <span><input type="button" value=" Volver " onclick="history.go(-1)" class="volver"></span>
 <span class="g20-ribbon" style="width: 90vw">&copy; 2024 Grupo-20</span>
 </nav></div>`
-document.getElementById("volver").innerHTML = goback;
+
+if( document.getElementById("volver") != null) {
+    document.getElementById("volver").innerHTML = goback;
+}
 
 
 // Coloca Redes sociales y barra final
@@ -156,6 +189,7 @@ function logout()
   document.getElementById("crud2").style.visibility = 'hidden';
   document.getElementById("crud").style.visibility = 'hidden';
   document.getElementById("crud").style.display = 'none';
+  clearUser() 
   window.open("./index.html");
 }
 
@@ -163,7 +197,7 @@ function logout()
 
 if (sessionStorage.getItem("adm")!="1"){
    // not login 
-   document.getElementById("crud").style.display = 'none';
+ //  document.getElementById("crud").style.display = 'none';
 }else{
    // login inside 
    let nivel = parseInt( sessionStorage.getItem("lev") );
