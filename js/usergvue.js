@@ -1,5 +1,4 @@
 
-
 const { createApp } = Vue
 
 createApp({
@@ -8,7 +7,7 @@ createApp({
             usuarios: [],
             // esto es para el boton modificar +(location.search.substr(4)===""?'':"/")    
             // +location.search.substr(4)
-            url: 'https://adegarate.pythonanywhere.com/usuarios',
+            url: 'http://adegarate.pythonanywhere.com/usuarios',
             error: false,
             cargando: true,
             /*alta*/
@@ -25,7 +24,6 @@ createApp({
                 .then(data => {
                     this.usuarios = data;
                     this.cargando = false                 
-                    //console.log(this.usuarios)
                 })
                 .catch(err => {
                     console.error(err);
@@ -41,7 +39,7 @@ createApp({
             fetch(url, options)
                 .then(res => res.text()) // or res.json()
                 .then(res => {
-                   alert( 'Registro Eliminado')
+                 //   alert( 'Registro Eliminado')
                     location.reload(); // recarga el json luego de eliminado el registro
                 })
         },
@@ -60,8 +58,8 @@ createApp({
             }
             fetch(this.url, options)
                 .then(function () {
-                  //  alert("Registro grabado")
-                    window.location.href = "./usergvue.html";
+                   // alert("Registro grabado")
+                    window.location.href = "./login.html";
                 })
                 .catch(err => {
                     console.error(err);
@@ -93,7 +91,6 @@ createApp({
 
         login() {
             username = this.username
- //           sessionStorage.setItem("adm",0)
             var i= 0
             var bFound = false; 
 //            while( i < this.usuarios.length && (this.usuarios[i].username != this.username)  ){
@@ -104,11 +101,14 @@ createApp({
 //alert("encontrado\n"+ this.usuarios[i].id+" "+this.usuarios[i].username +" "+ this.usuarios[i].clave);
 
                   if( this.usuarios[i].clave == this.clave ){
-                       
+                     
                       if( this.usuarios[i].rol > 100){
+                        // alert("entro al login " + this.usuarios[i].username);
                           sessionStorage.setItem("usr", this.usuarios[i].username );     
                           sessionStorage.setItem("lev", this.usuarios[i].rol);
                           sessionStorage.setItem("adm", "1");
+                          document.getElementById("guser").innerHTML = this.usuarios[i].username +" / "+
+                             this.usuarios[i].rol;
                       }
                       window.location.href = "./login.html";
                       break;
