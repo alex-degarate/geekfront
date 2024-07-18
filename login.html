@@ -11,12 +11,7 @@
  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
- <link rel="stylesheet" href="./css/geek2.css">
-
-<style>
- body { background-color: #f0f0f0; }
-</style>
-
+ <link rel="stylesheet" href="./css/geek2.css"> 
 </head>
 
 <body>
@@ -25,25 +20,29 @@
   </header>
 
 <main>
+
 <div style="height: 180px;"> </div>
 
     <div class="container" id="app">
       <form id="flogin">
         
-        <h3 id="c1">Login</h3>
-        <br>
-        <div class="mb-3">
-          <label for="username">Usuario:&nbsp;</label>
-          <input type="text" name="username" id="username" v-model="username">
-        </div>
-        <div class="mb-3">
-          <label for="clave">&nbsp; Clave:&nbsp;</label>
-          <input type="text" name="clave" id="clave" v-model="clave">
-        </div>       
-        <br> 
-        <center>
-          <button type="button" class="btn btn-success" v-on:click="login()">Enviar</button>
-        </center>
+         <h3 id="ftitulo">Login</h3>
+         <br>
+         <div class="mb-3">
+           <label for="username">Usuario:&nbsp;</label>
+           <input type="text" name="username" id="username" v-model="username" placeholder="admin">
+         </div>
+         <div class="mb-3">
+           <label for="clave">&nbsp; Clave:&nbsp;</label>
+           <input type="text" name="clave" id="clave" v-model="clave" placeholder="admin">
+         </div>       
+         <br> 
+         <div class="fbotones"> 
+           <button class="btn btn-basic" 
+             onclick="location.href ='./index.html'" >Cancelar </button> &nbsp;  
+           <button type="button" class="btn btn-success" v-on:click="login()">Enviar</button>
+         </div>        
+
       </form>
     </div>
 
@@ -61,6 +60,7 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+  <script src="./js/geek.js"></script>
   <script src="./js/geek2.js"></script>
   <script src="./js/usergvue.js"></script>
 

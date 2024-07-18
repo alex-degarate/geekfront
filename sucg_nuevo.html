@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Alta Sucursal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"  
+  rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+  crossorigin="anonymous">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/geek2.css">
+
+<style>
+
+img.absolute {
+   position: absolute;  
+   bottom: 240px;
+   right: 230px;
+ }
+
+h2#pepe {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px darkgray;
+}
+
+</style>
+
+</head>
+
+<body>
+  <header id="header">
+  </header>
+
+<main>
+<div style="height: 80px;"> </div>
+
+    <div class="container" id="app">
+     
+     <form id="fmodif">
+      <h3 id="ftitulo" style="">Alta Sucursal </h3>
+        <br>
+        <div class="mb-3">
+
+          <!-- label for="id"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Id:&nbsp;</label>
+          <input type="number" id="id" name="id" v-model="id" size="6"
+             style="-moz-appearance: textfield" -->  &nbsp; &nbsp; &nbsp; 
+
+          <label for="codsuc"> &nbsp; Código Suc:&nbsp;</label>
+          <input type="number" name="codsuc" id="codsuc" v-model="codsuc" size="6"
+             style="-moz-appearance: textfield">
+        </div>
+        <div class="mb-3">
+          <label for="nombresuc">&nbsp; Nombre Suc:&nbsp;</label>
+          <input type="text" name="nombresuc" id="nombresuc" v-model="nombresuc" size="48">
+        </div>
+        <div class="mb-3">
+          <label for="distrito"> &nbsp; &nbsp; Distrito:&nbsp;</label>
+          <input type="number" name="distrito" id="distrito" v-model="distrito" size="4"
+             style="-moz-appearance: textfield">
+        </div>
+        <div class="mb-3">
+          <label for="calle">&nbsp; &nbsp; &nbsp; &nbsp;Calle:&nbsp;</label>
+          <input type="text" name="calle" id="calle" v-model="calle" size="46">
+        </div>
+        <div class="mb-3">
+          <label for="numero"> &nbsp; &nbsp; &nbsp; Número:&nbsp;</label>
+          <input type="number" name="numero" id="numero" v-model="numero" size="8"
+             style="-moz-appearance: textfield;"> &nbsp; &nbsp; 
+        
+          <label for="codpost">&nbsp; Cod.Post:&nbsp;</label>
+          <input type="text" name="codpost" id="codpost" v-model="codpost" size="9"
+             style="-moz-appearance: textfield;">
+        </div>
+        <div class="mb-3">
+          <label for="obser">&nbsp; &nbsp;  &nbsp;&nbsp;Observ:</label><br> &nbsp; &nbsp; &nbsp;&nbsp;
+          <textarea id="obser" rows="3" cols="50" name="obser"  v-model="obser" > </textarea>         
+        </div>   
+      
+        <div class="mb-3">
+          <label for="ultmod">&nbsp; &nbsp;Ult.Modif:&nbsp;</label>
+          <input id="ultmod" type="text" name="ultmod" v-model="ultmod" size="10">  
+         </div>
+         <br>
+
+        <div class="fbotones">      
+           <button class="btn btn-basic" style="--bs-btn-hover-bg: #c0c0c0;"
+             onclick="history.go(-1)">Cancelar</button> &nbsp;
+           <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>    
+        </div>
+    </form>
+   </div>
+
+<div style="height: 50px;"> </div>
+
+</main>
+
+<footer id="volver">
+</footer>
+
+ <!-- Bootstrap JavaScript Libraries -->
+<script
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+ integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"   
+ crossorigin="anonymous"> 
+</script>
+
+ <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+ <script src="./js/geek.js"></script>
+ <script src="./js/geek2.js"></script>
+ <script src="./js/sucgvue.js"></script>
+
+<script>
+ var fecha = document.querySelector('#ultmod');
+ fecha.value = formatDate( new Date());
+</script>
+
+</body>
+</html>
+

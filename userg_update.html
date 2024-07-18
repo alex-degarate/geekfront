@@ -12,11 +12,6 @@
  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="./css/geek2.css">
-
-<style>
-
-</style>
-
 </head>
 
 <body>
@@ -24,27 +19,36 @@
   </header>
 
 <main>
+
 <div style="height: 176px;"> </div>
 
-    <div class="container" id="app" >
+    <div class="container" id="appu" style="">
  
        <form id="rform2">
 
-         <h3 id="ftitulo">Alta de Usuario</h3>
+         <h3 id="ftitulo">Editar Usuario</h3>
          <br>
+        <div class="mb-3">
+          <label for="id"> &nbsp; &nbsp; &nbsp;Id:&nbsp;</label>
+          <input type="number" name="id" id="id" v-model="id" style="-moz-appearance: textfield;"
+            size="5" disabled>&nbsp; &nbsp; &nbsp; 
+         </div>
          <div class="mb-3">
            <label for="username">Usuario:&nbsp;</label>
            <input type="text" name="username" id="username" v-model="username">
          </div>
          <div class="mb-3">
-           <label for="clave">&nbsp; Clave:&nbsp;</label>
-           <input type="password" name="clave" id="clave" v-model="clave">
+           <label for="rol">&nbsp; &nbsp; Rol:&nbsp;</label>
+           <input type="number" name="rol" id="rol" v-model="rol"  size="5" 
+            style="-moz-appearance: textfield;">
          </div>        
          <br>
-         <center>
-          <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
-         </center>
-
+         <div class="fbotones"> 
+           <button type="button" class="btn btn-basic" 
+             onclick="history.go(-1)" >Cancelar </button> &nbsp;  
+           <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
+         </div>        
+ 
        </form>  
 
      </div>
@@ -62,7 +66,7 @@
 
   <script src="./js/geek.js"></script>
   <script src="./js/geek2.js"></script>
-  <script src="./js/usergvue.js"></script>
+  <script src="./js/userg_editar.js"></script>
 
 <script>
 

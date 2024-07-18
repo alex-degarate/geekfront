@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="./css/geek2.css">
 
 <style>
-
 img.absolute {
    position: absolute;  
    bottom: 240px;
@@ -24,6 +23,7 @@ img.absolute {
  }
 
 .btn-basic { background-color: #e0e0e0; }
+
 </style>
 
 </head>
@@ -38,7 +38,7 @@ img.absolute {
     <div class="container" id="app">
      
      <form id="fmodif">
-      <h3 id="titulo"> &nbsp;Editar Producto </h3>
+      <h3 id="ftitulo"> &nbsp;Editar Producto </h3>
      &nbsp;
         <div class="mb-3">
           <label for="id"> &nbsp; &nbsp; &nbsp; &nbsp;Id:&nbsp;</label>
@@ -83,11 +83,11 @@ img.absolute {
         </div>         
         <img class="absolute" :src="imagen" width="100" height="100" alt="">  
        
-        <!-- center -->
-        <!-- button type="button" class="btn btn-basic" 
-          onclick="location.href ='./prodgvue.html'">Cancelar</button --> &nbsp;
-        <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
-        <!-- /center -->
+        <div class="fbotones">      
+          <button class="btn btn-basic" 
+           onclick="location.href ='./prodgvue.html'" >Cancelar </button> &nbsp;  
+          <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
+        </div>
     </form>
    </div>
 
@@ -106,13 +106,13 @@ img.absolute {
 </script>
 
  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
- <!--script src="./js/main.js"></script -->
+ <script src="./js/geek.js"></script>
  <script src="./js/geek2.js"></script>
  <script src="./js/prodg_editar.js"></script>
 
 <script>
  var fecha = document.querySelector('#ultmod');
- fecha.value = formatDate( new Date());
+ fecha.value = Today(); //formatDate( new Date());
 </script>
 
 </body>

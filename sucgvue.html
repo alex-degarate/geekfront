@@ -13,7 +13,7 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/geek2.css">
 
-<title> Productos </title> 
+<title> Sucursales </title> 
 
 <style>
  main { background-color:#f0f0f0 ;}
@@ -26,7 +26,7 @@ tr:hover {background-color: #ffc7b3;}
 
 #tope { 
      font-family: system-ui, Arial;
-     font-size: 14px;
+     font-size: 13px;
      font-weight: 300 !important;
      color: red;
      --bs-table-font-weight: 300;
@@ -42,6 +42,7 @@ td { font-size: 12px;}
    }
 
 .a1 { font-weight: 400 !important;}
+
 </style>
 <script>
 function formatMoney( num ) 
@@ -53,6 +54,8 @@ function formatMoney( num )
  sNum = part1 + "." + part2 + ",00";
  return sNum; 
 }
+
+
 </script>
 </head>
 
@@ -64,11 +67,11 @@ function formatMoney( num )
 
     <div style="height: 100px;"> </div>
 
-        <h1 id="c1">Productos</h1>
+        <h1 id="c1">Sucursales</h1>
 
-  <div id="app" class="container" style="width: 98vw; margin:0 auto; margin-left: 70px; " >
+  <div id="app" class="container" style="width: 98vw; margin:0 auto;" >
 
-        <a class="btn btn-primary" href="prodg_nuevo.html">Nuevo producto</a>
+        <a class="btn btn-primary" href="sucg_nuevo.html">Nueva sucursal</a>
         <br><br>
         <div v-if="error">
              <p>Lo sentimos , intente mas tarde........</p>
@@ -81,42 +84,40 @@ function formatMoney( num )
             </section>
 
             <section v-else>
-                <div class="table-responsive" >
+                <div class="table-responsive-sm" >
 
                     <table class="table-sm table-bordered" id="tprod"
                        style="border:1px solid gray; border-radius: 6px; ">
+
                         <thead style="background-color: #e6e6e6; text-align:center;">
-                          <!-- e7e9eb -sm -md -->
                             <tr id="tope">
                                 <th scope="col" class="a1">&nbsp;Id &nbsp;</th>
-                                <th scope="col" class="a1">Codigo</th>
-                                <th scope="col" class="a1">&nbsp;Nombre_del_Producto</th>
-                                <th scope="col" class="a1">&nbsp;Categoria &nbsp;</th>
-                                <th scope="col" class="a1">Tipo</th>
-                                <th scope="col" class="a1">&nbsp;&nbsp;Precio &nbsp; &nbsp;&nbsp;</th>
-                                <th scope="col" class="a1">&nbsp;Stock&nbsp;</th>
+                                <th scope="col" class="a1">Cod.Suc</th>
+                                <th scope="col" class="a1">Nombre_de_Sucursal</th>
+                                <th scope="col" class="a1">Distrito</th>
+                                <th scope="col" class="a1">Calle</th>
+                                <th scope="col" class="a1">Número</th>
+                                <th scope="col" class="a1">C.Post</th>
+                                <th scope="col" class="a1"> Observaciones</th>
                                 <th scope="col" class="a1">Ult. Modific.</th>
-                                <th scope="col" class="a1">Imagen</th>
-                                <th scope="col" class="a1">&nbsp;Acciones_del_usuario &nbsp;</th>
+                                <th scope="col" class="a1"> Acciones_del_usuario &nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="" v-for="producto in productos">
-                                <td scope="row">&nbsp; {{producto.id}}</td>
-                                <td>{{producto.code}}</td>
-                                <td>{{producto.nombre}}</td>
-                                <td>{{producto.categoria}}</td>
-                                <td>{{producto.tipo}}</td>
-                                <td>$ {{producto.precio}}</td>
-                                <td>{{producto.stock}}</td>     
-                                <td>{{producto.ultmod}}</td>
-                                <td>
-                                    <img width="60" :src="producto.imagen" :alt="empty">
-                                </td>
+                            <tr class="" v-for="sucursal in sucursales">
+                                <td scope="row">&nbsp; {{sucursal.id}}</td>
+                                <td>{{sucursal.codsuc}} </td>
+                                <td>{{sucursal.nombresuc}}</td>
+                                <td>{{sucursal.distrito}} </td>
+                                <td>{{sucursal.calle}}  </td>
+                                <td>{{sucursal.numero}} </td>
+                                <td>{{sucursal.codpost}}</td>     
+                                <td>{{sucursal.obser}}  </td>     
+                                <td>{{sucursal.ultmod}} </td>
                                 <td> &nbsp;
-                      <a class="btn btn-primary" :href="'prodg_update.html?id='+ producto.id"
+                      <a class="btn btn-primary" :href="'sucg_update.html?id='+ sucursal.id"
                       >Editar</a> &nbsp;
-                     <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" 
+                     <button type="button" class="btn btn-danger" v-on:click="eliminar(sucursal.id)" 
                       > Eliminar</button>
                                 </td>
                             </tr>
@@ -141,17 +142,10 @@ function formatMoney( num )
 integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
 crossorigin="anonymous"></script>
 
-<!-- para poner el header y footer desde js
-user-Agent
-	Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0
-script src="./js/main.js"></script -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
 <script src="./js/geek.js"></script>
 <script src="./js/geek2.js"></script>
-<script src="./js/prodgvue.js"></script>
-
-<script>
-</script>
+<script src="./js/sucgvue.js"></script>
 
 </body>
 </html>      
