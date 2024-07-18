@@ -60,11 +60,32 @@
     margin: 4px 14px;
  }
 
+#ftitulo { 
+     font-family: Monospace, Courier;
+/*     font-size: 23px; */
+     text-align: center;
+     text-shadow: 2px 2px 1px rgba(120,120,120,.5);
+    }
+
+/* original
 #titulo { 
      font-family: Monospace, Courier;
      font-size: 23px; 
      text-align: center;
     }
+*/
+
+/* usa parte de bootstrap */
+.btn-basic { 
+    --bs-btn-bg: #e0e0e0;
+    background-color: #e0e0e0; 
+    --bs-btn-hover-bg: #c0c0c0;
+}
+
+.fbotones {
+   width: 220px; 
+   margin: 0 auto !important;
+}
 
 #footbar {
      height: 36px;
@@ -97,4 +118,24 @@ img.absolute1 {
    bottom: 210px;
    right: 230px;
  }
+
+/*
+.btn-basic,.btn-gray { 
+  --bs-btn-color: white;
+background-color: #e0e0e0;  
+  --bs-btn-bg: #e0e0e0;  
+  --bs-btn-border-color: #e0e0e0;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #e0e0e0;
+  --bs-btn-hover-border-color: gray;
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: white;
+  --bs-btn-active-bg: #e0e0e0;
+  --bs-btn-active-border-color:#e0e0e0;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #e0e0e0;
+  --bs-btn-disabled-border-color:e0e0e0;
+}
+*/
 
