@@ -1,16 +1,17 @@
 /* GEEK */
- 
+// levanta el json dinamico para el carousel
+var datos = [];
+
 const { createApp } = Vue
 createApp({
   data() {
     return {
-      url: "https://crisysadmin.github.io/Geek/js/shirts.json",
+      url: "http://adegarate.pythonanywhere.com/productos",
       datos: [],
       error: false,
     }
   },
   methods: {
-
 
     fetchData(url) {
       fetch(url)
@@ -18,8 +19,9 @@ createApp({
         .then(response => response.json())
         .then(
           data => {
-            // console.log(data);
+            console.log(data);            
             this.datos = data;
+            datos = data;
           }
         )
         .catch(error => {
@@ -32,7 +34,14 @@ createApp({
   this.fetchData(this.url)
 }
 
-
-}).mount('#app')
- 
+}).mount('#appgal')
 // https://github.com/Crisysadmin/Geek/tree/main/js/shirts.json
+
+
+
+
+
+
+
+
+

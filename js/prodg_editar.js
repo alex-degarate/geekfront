@@ -14,7 +14,7 @@ const { createApp } = Vue
         categoria: "",
         tipo: "",
         stock: 0,
-        precio: 0,
+        precio: 0.0,
         imagen:"",
         ultmod: "",  
         url:'https://adegarate.pythonanywhere.com/productos/'+id, 
@@ -64,7 +64,7 @@ const { createApp } = Vue
             // alert("=>"+ this.url);
             fetch(this.url, options)
                 .then(function () {
-                    alert("Registro modificado")
+                 //   alert("Registro modificado")
                     window.location.href ="./prodgvue.html"; // navega a productos.html
                 })
                 .catch(err => {
@@ -72,6 +72,7 @@ const { createApp } = Vue
                     alert("Error al Modificar")
                 })
         }
+ 
     },
     //
     created() {

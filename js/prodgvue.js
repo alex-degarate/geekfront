@@ -31,7 +31,8 @@ const { createApp } = Vue
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
-              //  alert("" +Today());
+               // alert("" +Today());
+                    datos = data;
                     this.productos = data;
                     this.cargando  = false
                 })
@@ -65,7 +66,7 @@ const { createApp } = Vue
                 stock: this.stock,
                 precio: this.precio,
                 imagen: this.imagen,
-                ultmod: this.ultmod // Today()
+                ultmod: this.ultmod  
             }
             var options = {
                 body:JSON.stringify(producto),
